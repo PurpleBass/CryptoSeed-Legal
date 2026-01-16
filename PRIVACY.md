@@ -43,4 +43,4 @@ acceptance of the updated policy.
 
 8. CONTACT
 For questions regarding privacy, contact:
-Eduardo Garcia Ortiz
+Eduardo Garcia

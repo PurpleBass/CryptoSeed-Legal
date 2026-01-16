@@ -1,46 +1,18 @@
-CRYPTOSEED PRIVACY POLICY
+# CryptoSeed Privacy Policy
 
-Last updated: January 2026
+CryptoSeed is a local encryption utility. This Privacy Policy describes how CryptoSeed handles data.
 
-CryptoSeed is designed with privacy as a core principle.
+**No Personal Data Collected**  
+CryptoSeed does not collect, store, track, or transmit any personal data. All cryptographic operations are performed **locally on the user’s device**.
 
-1. DATA COLLECTION
-CryptoSeed does NOT collect, store, transmit, or sell any personal data.
+**No Tracking or Analytics**  
+CryptoSeed does not use analytics SDKs, tracking, advertising identifiers, or third-party data collection. The app does not record usage, telemetry, or device identifiers.
 
-The App does not collect:
-- Names
-- Email addresses
-- Phone numbers
-- Contacts
-- Location data
-- Usage analytics
-- Crash analytics
-- Identifiers
+**No Server or Network Communication**  
+CryptoSeed does not communicate with servers, cloud services, or external networks as part of its core functionality. User files and keys remain on device unless the user explicitly exports or shares them.
 
-2. LOCAL PROCESSING
-All cryptographic operations, key generation, encryption, and decryption are
-performed locally on the user’s device.
+**Local-Only Encryption**  
+All encryption and decryption are done on device using standard cryptographic libraries. No data is sent to any external server or service.
 
-No data is sent to external servers.
-
-3. NETWORK ACCESS
-CryptoSeed does not require network access to function.
-
-4. THIRD PARTIES
-CryptoSeed does not integrate with third-party analytics, advertising, or
-tracking SDKs.
-
-5. DATA STORAGE
-Any data created by the user (keys, encrypted files, contacts) is stored locally
-on the device and remains under the user’s control.
-
-6. CHILDREN’S PRIVACY
-CryptoSeed does not knowingly collect any data from children.
-
-7. CHANGES
-This Privacy Policy may be updated. Continued use of the App constitutes
-acceptance of the updated policy.
-
-8. CONTACT
-For questions regarding privacy, contact:
-Eduardo Garcia
+**Contact**  
+If you have questions about this Privacy Policy, contact: support@cryptoseed.app

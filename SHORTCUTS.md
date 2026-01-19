@@ -1,100 +1,70 @@
-CryptoSeed — Pre-Built Shortcuts
+# CryptoSeed — Pre-Built Shortcuts
 
 These are official, pre-configured Apple Shortcuts designed to work with CryptoSeed.
 
 All shortcuts:
-	•	Run locally
-	•	Require no accounts
-	•	Do not send data to servers
-	•	Use CryptoSeed’s on-device encryption actions
+- Run locally
+- Require no accounts
+- Do not send data to servers
+- Use CryptoSeed’s on-device encryption actions
 
-⸻
+---
 
-🔑 Key & Identity Management
+## 🔑 Key & Identity Management
 
-Key Manager
+### Key Manager
+Create, list, rename, and delete symmetric keys and asymmetric identities.  
+👉 [Add Key Manager Shortcut](https://www.icloud.com/shortcuts/60cda71e2e994d4fa3f3f6372064b9b8)
 
-Create, list, rename, and delete symmetric keys and asymmetric identities.
+### Contact Manager
+Manage trusted contacts for asymmetric encryption and verification.  
+👉 [Add Contact Manager Shortcut](https://www.icloud.com/shortcuts/11a9755370124e16ae09b58e5993fbf5)
 
-🔗 https://www.icloud.com/shortcuts/60cda71e2e994d4fa3f3f6372064b9b8
+---
 
-⸻
+## 🔐 Encryption & Decryption
 
-Contact Manager
+### Encrypt
+Encrypt text or files using CryptoSeed keys.  
+👉 [Add Encrypt Shortcut](https://www.icloud.com/shortcuts/028b429f2d51448b8c3599b08fe39559)
 
-Manage trusted contacts for asymmetric encryption and verification.
+### Decrypt
+Decrypt ciphertext using the correct key or identity.  
+👉 [Add Decrypt Shortcut](https://www.icloud.com/shortcuts/9ff656c92e1c425192851d2c38b958d9)
 
-🔗 https://www.icloud.com/shortcuts/11a9755370124e16ae09b58e5993fbf5
+---
 
-⸻
+## 📋 Clipboard Automation
 
-💾 Backup & Recovery
+### Auto Encrypt / Decrypt Clipboard (Symmetric)
+Automatically encrypt or decrypt clipboard content using symmetric keys.  
+👉 [Add Clipboard (Symmetric)](https://www.icloud.com/shortcuts/71a51f6a40e4432399ac054da5e01d5d)
 
-Backups
+### Auto Encrypt / Decrypt Clipboard (Asymmetric)
+Clipboard encryption using public/private key pairs.  
+👉 [Add Clipboard (Asymmetric)](https://www.icloud.com/shortcuts/6c092cfeb94845e69cf7065e3fe1dd5f)
 
-Backup and restore CryptoSeed keys and identities securely.
+---
 
-🔗 https://www.icloud.com/shortcuts/60d86298f9c14bcc998de3e8de7517a7
+## 📦 Backup & Maintenance
 
-⸻
+### Backups
+Back up keys and identities securely.  
+👉 [Add Backup Shortcut](https://www.icloud.com/shortcuts/60d86298f9c14bcc998de3e8de7517a7)
 
-Delete All CryptoSeed Data
+### Delete Data
+Permanently remove CryptoSeed data from the device.  
+👉 [Add Delete Data Shortcut](https://www.icloud.com/shortcuts/114ca1d1a3bc48179900fcaae7ad4918)
 
-Permanently deletes all CryptoSeed keys, identities, and contacts.
+---
 
-⚠️ This action is irreversible.
+## 📸 Media
 
-🔗 https://www.icloud.com/shortcuts/114ca1d1a3bc48179900fcaae7ad4918
+### Shoot & Encrypt Photo
+Take a photo and encrypt it immediately.  
+👉 [Add Shoot & Encrypt Photo](https://www.icloud.com/shortcuts/eb3c0ac2810a447099badf2acfcd0dc4)
 
-⸻
+---
 
-🔐 Encryption & Decryption
-
-Encrypt
-
-Encrypt text or files using CryptoSeed.
-
-🔗 https://www.icloud.com/shortcuts/028b429f2d51448b8c3599b08fe39559
-
-⸻
-
-Decrypt
-
-Decrypt text or files encrypted with CryptoSeed.
-
-🔗 https://www.icloud.com/shortcuts/9ff656c92e1c425192851d2c38b958d9
-
-⸻
-
-📋 Clipboard Automation
-
-Auto Encrypt/Decrypt Clipboard (Symmetric)
-
-Automatically encrypt or decrypt clipboard contents using a symmetric key.
-
-🔗 https://www.icloud.com/shortcuts/71a51f6a40e4432399ac054da5e01d5d
-
-⸻
-
-Auto Encrypt/Decrypt Clipboard (Asymmetric)
-
-Automatically encrypt or decrypt clipboard contents using asymmetric keys.
-
-🔗 https://www.icloud.com/shortcuts/6c092cfeb94845e69cf7065e3fe1dd5f
-
-⸻
-
-📷 Media
-
-Shoot and Encrypt Photo
-
-Take a photo and encrypt it immediately on device.
-
-🔗 https://www.icloud.com/shortcuts/eb3c0ac2810a447099badf2acfcd0dc4
-
-⸻
-
-⚠️ Important Notes
-	•	If you delete a key, any data encrypted with it may become permanently undecryptable.
-	•	CryptoSeed cannot recover lost keys.
-	•	Always test shortcuts with non-critical data first.
+⚠️ **Important:**  
+If you delete or lose a key used to encrypt data, recovery may be impossible.

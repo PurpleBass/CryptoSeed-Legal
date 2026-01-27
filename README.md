@@ -1,22 +1,21 @@
 CryptoSeed
 
-CryptoSeed is an iOS app that provides local, offline, user-controlled encryption for text, files, and cryptographic keys using Apple CryptoKit and Shortcuts / App Intents.
+CryptoSeed is an iOS app that provides local, offline, user-controlled encryption for text and files, with a clean native UI and optional Shortcuts automation.
 
-It does not use servers, user accounts, cloud storage, analytics, or external cryptography libraries.
-All cryptographic operations happen entirely on-device, under the user’s control.
+It uses Apple CryptoKit only, runs entirely on-device, and does not use servers, user accounts, cloud storage, analytics, or external cryptography libraries.
 
-CryptoSeed acts as a cryptographic toolbox and transport layer for iOS automation.
+All cryptographic operations happen locally, under the user’s control.
 
 ⸻
 
 What CryptoSeed Is (and Is Not)
 
 ✅ CryptoSeed is
-    •    A local encryption engine for iOS
-    •    A Shortcuts-first cryptography tool
-    •    A way to encrypt and decrypt text and files
+    •    A native iOS app for encrypting and decrypting text and files
+    •    A local-first cryptography tool with no network dependency
     •    A way to manage symmetric keys and asymmetric identities
-    •    A way to securely share keys between devices or people
+    •    A system for secure key sharing using public-key cryptography
+    •    An automation-friendly cryptography engine exposed via Shortcuts / App Intents
     •    An educational and auditable reference for applied cryptography on iOS
 
 ❌ CryptoSeed is not
@@ -31,15 +30,15 @@ What CryptoSeed Is (and Is Not)
 Threat Model
 
 CryptoSeed is designed to protect against:
-    •    Accidental exposure of sensitive files or text
+    •    Accidental exposure of sensitive text or files
     •    Curious apps or users without the correct keys
     •    File interception during sharing
-    •    Device compromise without access to keys
+    •    Device compromise without access to encryption keys
 
 CryptoSeed does not protect against:
     •    Malware with full device access
     •    An attacker who already has your keys
-    •    You losing all backups and keys
+    •    Losing all backups and keys
 
 CryptoSeed gives you control, not guarantees against poor key management.
 
@@ -48,20 +47,21 @@ CryptoSeed gives you control, not guarantees against poor key management.
 Core Design Principles
     •    🔐 Local-only cryptography (no servers, no sync)
     •    🧱 Apple CryptoKit only
-    •    🔑 Keys stored in iOS Keychain
-    •    🧩 Composable via Shortcuts
+    •    🔑 Keys stored securely in iOS Keychain
+    •    📱 Fully usable via native iOS UI
+    •    ⚡ Automation-ready via Shortcuts
     •    📂 Files decrypt back to usable formats
-    •    📖 Explainable and auditable
+    •    📖 Explainable, auditable, and transparent
 
 ⸻
 
 Cryptography Overview
 
 Algorithms Used
-    •    Symmetric Encryption: ChaCha20-Poly1305
-    •    Asymmetric Key Agreement: X25519
-    •    Key Derivation: HKDF-SHA256
-    •    Authentication: AEAD (built into ChaChaPoly)
+    •    Symmetric encryption: ChaCha20-Poly1305
+    •    Asymmetric key agreement: X25519
+    •    Key derivation: HKDF-SHA256
+    •    Authentication: AEAD (via ChaChaPoly)
 
 All cryptography is provided by Apple CryptoKit.
 
@@ -75,14 +75,14 @@ Capabilities
     •    Uses named 256-bit symmetric keys stored in Keychain
 
 File Behavior
-    •    invoice.pdf → invoice.pdf.cseed
+    •    invoice.pdf → invoice.pdf.seed
     •    Decrypts back to invoice.pdf
     •    Files open normally in Files / Preview
 
 Key Management
     •    Keys are generated securely (random, 256-bit)
     •    Stored in iOS Keychain
-    •    Can be:
+    •    Keys can be:
     •    Created
     •    Deleted
     •    Exported securely
@@ -95,7 +95,7 @@ Asymmetric Encryption (Public Key)
 Identities
     •    Each identity is an X25519 keypair
     •    Private keys stored securely in Keychain
-    •    Default identity: “Personal Device Key”
+    •    Default identity: Personal Device Key
 
 Capabilities
     •    Encrypt text to a recipient public key
@@ -104,7 +104,7 @@ Capabilities
     •    Export / import identities securely
 
 File Behavior
-    •    photo.jpg → photo.jpg.cseedasym
+    •    photo.jpg → photo.jpg.seed
     •    Decrypts back to photo.jpg
 
 ⸻
@@ -128,7 +128,7 @@ This enables:
     •    Secure backups
     •    Secure sharing
     •    Device migration
-    •    Team or family workflows
+    •    Family or team workflows
 
 ⸻
 
@@ -146,23 +146,25 @@ Treat them like master keys.
 iOS Keychain Behavior
     •    Keys are stored per app
     •    Deleting the app deletes its Keychain items
-    •    Therefore:
+
+Therefore:
     •    Deleting CryptoSeed without backups makes encrypted data inaccessible
     •    CryptoSeed provides export mechanisms to avoid lock-in
 
-This is intentional and transparent.
+This behavior is intentional and transparent.
 
 ⸻
 
-Shortcuts & App Intents
+Shortcuts & Automation
 
-CryptoSeed exposes cryptography as building blocks for Shortcuts:
-    •    Encrypt before uploading to cloud storage
-    •    Securely share keys via public key
-    •    Build custom secure workflows
+CryptoSeed optionally exposes cryptography as building blocks for Apple Shortcuts:
+    •    Encrypt files before uploading to cloud storage
+    •    Securely share keys using public-key cryptography
+    •    Build custom privacy-preserving workflows
     •    Combine with Files, Share Sheets, QR codes, AirDrop
 
-CryptoSeed stays small. Shortcuts do the orchestration.
+The native app UI covers everyday usage.
+Shortcuts enable advanced automation.
 
 ⸻
 
